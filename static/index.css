@@ -1,0 +1,83 @@
+/*Pang Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+    position: relative;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; 
+  background-color: #e6e9ed;
+
+}
+
+.container{
+    background-color: yellow;
+    height: 100dvh;
+    width:100%;
+    display: flex;
+}
+
+#landing{
+    background-color: green;
+    height: 90dvh;
+}
+
+#LPU-video{
+    position:absolute;
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+}
+
+#landing-left{
+    height: 100%;
+    width: 40%;
+    background-color: red;
+}
+
+#landing-right{
+    height: 100%;
+    width: 60%;
+    background-color: orange;
+}
+
+#mini-nav{
+    height:20dvh;
+    background-color: yellow;
+    width: 100%;
+}
+
+#announcement{
+    background-color: violet;
+}
+
+#services{
+    background-color: orange;
+}
+
+#about{
+    background-color: red;
+}
+
+#contact{
+    background-color: blue;
+}
+
+#navbar{
+    height: 10dvh;
+    background-color: lightblue;
+    position: sticky;
+    top: 0;
+}
+
+#footer{
+    height: 30dvh;
+    width: 100%;
+    background-color: #161616;
+}
