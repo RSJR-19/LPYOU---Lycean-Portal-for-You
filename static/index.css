@@ -31,7 +31,7 @@ body {
 #LPU-video{
     position:absolute;
     background-color: grey;
-    height: 100%;
+    height: 90dvh;
     width: 100%;
 }
 
