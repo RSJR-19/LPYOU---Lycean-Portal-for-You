@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 
 }
 
@@ -16,6 +17,36 @@ body {
 
 }
 
+#navbar{
+    height: 10dvh;
+    background-color: #E6E9ED;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#nav_left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: RED;
+
+}
+
+#nav_right{
+    height: 100%;
+    width:40%;
+    background-color: YELLOW;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .container{
     background-color: yellow;
     height: 100dvh;
@@ -26,25 +57,40 @@ body {
 #landing{
     background-color: green;
     height: 90dvh;
+
+}
+
+#logo-img{
+    height: 80%;
+    /* aspect-ratio: 1/1; */
+    margin-left: 10px;
+    /* margin-bottom: 10px; */
+    /* margin-top: 10px; */
 }
 
 #LPU-video{
     position:absolute;
-    background-color: grey;
+    background-color: white;
     height: 90dvh;
     width: 100%;
+
 }
 
 #landing-left{
-    height: 100%;
+    height: 90dvh;
     width: 40%;
-    background-color: red;
+    background-color: #225EAF;
+    position: absolute;
+    opacity: 50%;
 }
 
 #landing-right{
-    height: 100%;
+    height: 90dvh;
     width: 60%;
-    background-color: orange;
+    background-color: #AF8E00;
+    position: absolute;
+    left: 40%;
+    opacity: 50%;
 }
 
 #mini-nav{
@@ -69,12 +115,6 @@ body {
     background-color: blue;
 }
 
-#navbar{
-    height: 10dvh;
-    background-color: lightblue;
-    position: sticky;
-    top: 0;
-}
 
 #footer{
     height: 30dvh;
