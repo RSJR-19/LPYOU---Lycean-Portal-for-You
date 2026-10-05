@@ -26,33 +26,28 @@ body {
     min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: #e6e9ed;
+    background-color: var(--color-bg);
 
 }
 
 #navbar {
     height: 10dvh;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 10000;
     display: flex;
     justify-content: space-around;
-
-    /* 
-        HINDI KO NA GETS ANG DISPLAY AT JUSTIFY-CONTENT WAH 
-            -gaudenz
-    */
-    /* padding: 0 8%; */
+    border-radius: 0 0 30px 30px;
 
     background-color: var(--color-bg);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.30);
 }
 
 #logo-img {
     height: 80%;
-    /* aspect-ratio: 1/1; */
     margin-left: 10px;
-    /* margin-bottom: 10px; */
-    /* margin-top: 10px; */
+
 }
 
 #nav_left {
@@ -61,14 +56,13 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* background-color: RED; */
+
 
 }
 
 #nav_right {
     height: 100%;
     width: 40%;
-    /* background-color: YELLOW; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -96,60 +90,88 @@ body {
 #landing {
     background-color: #0F172A;
     position: relative;
-    height: 90dvh;
+    height: 100dvh;
+    overflow: hidden;
 }
 
 #LPU-video {
     position: absolute;
-    background-color: white;
-    height: 90dvh;
+    background-color: var(--color-bg);
+    height: 100dvh;
     width: 100%;
 
 }
 
 #landing-left {
-    height: 100%;
+    height: 100dvh;
     width: 40%;
     background-color: #225EAF;
     position: absolute;
-    opacity: 70%;
+    opacity: 90%;
 
 }
 
-#text-overlay{
+#text-overlay {
     height: 100%;
 
     width: 40%;
-    z-index: 9999;
+    z-index: 9998;
     position: absolute;
     display: flex;
     align-items: center;
+
 }
 
-#text-group{
-    background-color: green;
+#text-group {
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0 10% 0 10%;
-
+    padding: 0 15% 0 15%;
+    
 }
 
+#eme-eme-ni-renan{
+    height: 30%;
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+    
+}
+
+#always-h1{
+    color: var(--color-text-white);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#you-h1{
+    color: var(--color-accent);
+    font-size: 5rem;
+}
+
+
 #landing-right {
-    height: 90dvh;
+    height: 100dvh;
     width: 60%;
     background-color: #AF8E00;
     position: absolute;
     left: 40%;
-    opacity: 30%;
+    opacity: 40%;
+}
+
+.subheading-h2{
+    color: var(--color-text-white);
 }
 
 .hero_title {
     /* Inter BOLD */
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--color-text-white);
 
@@ -181,13 +203,34 @@ body {
 
 #mini-nav {
     height: 20dvh;
-    background-color: yellow;
+    background-color: var(--color-bg);
     width: 100%;
 }
 
 #announcement {
     background-color: violet;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* top, right, bottom, left PALAGAY LANG LAGI KO NAKAKALIMUTAN HAHAH*/
+    padding: 0px 10% 5% 5%;
+
+    gap: 32px;
 }
+
+#header_announcement {
+    background-color: rgb(201, 40, 40);
+    width: 100%;
+    text-align: center;
+    gap: 8px;
+}
+
+#content_announcement {
+    background-color: red;
+    
+}
+
+
 
 #services {
     background-color: orange;
