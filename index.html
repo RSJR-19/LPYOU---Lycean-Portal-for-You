@@ -23,11 +23,11 @@
         </div>
 
         <div id="nav_right">
-            <a href="#landing" class="nav_item active">Home</a>
-            <a href="#announcement" class="nav_item">Announcements</a>
-            <a href="#services" class="nav_item">Services</a>
-            <a href="#about" class="nav_item">About</a>
-            <a href="#contact" class="nav_item">Contact</a>
+            <a href="#landing" class="nav_item" id="home-btn" onclick="trigger(1)" title="From the top">Home</a>
+            <a href="#announcement" class="nav_item" id="announce-btn" onclick="trigger(2)" title="Know what's new">Announcements</a>
+            <a href="#services" class="nav_item" id="services-btn" onclick="trigger(3)" title="Services to help you">Services</a>
+            <a href="#about" class="nav_item" id="about-btn" onclick="trigger(4)" title="About Us">About</a>
+            <a href="#contact" class="nav_item" id="contact-btn" onclick="trigger(5)" title="Important Numbers">Contact</a>
         </div>
 
     </nav>
@@ -72,99 +72,106 @@
             <p class="announcement_sub">Stay informed sa kaguluhan sa campus etc...</p>
         </div>
 
-        <div id="content_announcement">
-            <!-- card 1 -->
-            <div class="announcement_card">
-                <div class="card_header">
-                    <h3 class="card_title">Midterm Examination CANCELLED</h3>
-                    <span class="card_date">Oct 5, 20226</span>
+        <div class="carousel_container">
+            <div class="carousel_track" id="carouselTrack">
+                <!-- card 1 -->
+                <div class="announcement_card">
+                    <div class="card_header">
+                        <h3 class="card_title">Midterm Examination CANCELLED</h3>
+                        <span class="card_date">Oct 5, 20226</span>
+                    </div>
+                    <div class="card_image">
+                        <img src="img/poio.jpg"
+                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
+                    </div>
+                    <div class="card_subtext">
+                        <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum
+                            ipsum
+                            lorem kwan kwan hahah miss her</p>
+                    </div>
+                    <div class="card_footer">
+                        <a href="#post" class="card_link">Read Full something s</a>
+                    </div>
+
                 </div>
-                <div class="card_image">
-                    <img src="https://placehold.co/1000x500"
-                        alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
+
+                <!-- card 2 -->
+                <div class="announcement_card">
+                    <div class="card_header">
+                        <h3 class="card_title">Midterm Examination CANCELLED</h3>
+                        <span class="card_date">Oct 5, 20226</span>
+                    </div>
+                    <div class="card_image">
+                        <img src="https://placehold.co/1000x500"
+                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
+                    </div>
+                    <div class="card_subtext">
+                        <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum
+                            ipsum
+                            lorem kwan kwan hahah miss her</p>
+                    </div>
+                    <div class="card_footer">
+                        <a href="#post" class="card_link">Read Full something s</a>
+                    </div>
                 </div>
-                <div class="card_subtext">
-                    <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum ipsum
-                        lorem kwan kwan hahah miss her</p>
-                </div>
-                <div class="card_footer">
-                    <a href="#post" class="card_link">Read Full something s</a>
+
+                <!-- card 3?? -->
+                <div class="announcement_card">
+                    <div class="card_header">
+                        <h3 class="card_title">Midterm Examination CANCELLED</h3>
+                        <span class="card_date">Oct 5, 20226</span>
+                    </div>
+                    <div class="card_image">
+                        <img src="https://placehold.co/1000x500"
+                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
+                    </div>
+                    <div class="card_subtext">
+                        <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum
+                            ipsum
+                            lorem kwan kwan hahah miss her</p>
+                    </div>
+                    <div class="card_footer">
+                        <a href="#post" class="card_link">Read Full something s</a>
+                    </div>
                 </div>
 
             </div>
 
-            <!-- card 2 -->
-            <div class="announcement_card">
-                <div class="card_header">
-                    <h3 class="card_title">Midterm Examination CANCELLED</h3>
-                    <span class="card_date">Oct 5, 20226</span>
-                </div>
-                <div class="card_image">
-                    <img src="https://placehold.co/1000x500"
-                        alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                </div>
-                <div class="card_subtext">
-                    <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum ipsum
-                        lorem kwan kwan hahah miss her</p>
-                </div>
-                <div class="card_footer">
-                    <a href="#post" class="card_link">Read Full something s</a>
-                </div>
-            </div>
+            <div class="carousel_nav">
+                <!-- left -->
+                <button class="carousel_arrow carousel_arrow_left" id="arrowLeft">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
 
-            <!-- card 3?? -->
-            <div class="announcement_card">
-                <div class="card_header">
-                    <h3 class="card_title">Midterm Examination CANCELLED</h3>
-                    <span class="card_date">Oct 5, 20226</span>
+                <div id="carousel_dots">
+                    <span class="carousel_dot" data-index="0"></span>
+                    <span class="carousel_dot" data-index="1"></span>
+                    <span class="carousel_dot" data-index="2"></span>
                 </div>
-                <div class="card_image">
-                    <img src="https://placehold.co/1000x500"
-                        alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                </div>
-                <div class="card_subtext">
-                    <p>Examination kanselado kasi nag seeslos ako pero okay lang wala namang kami eh lorem ipsum ipsum
-                        lorem kwan kwan hahah miss her</p>
-                </div>
-                <div class="card_footer">
-                    <a href="#post" class="card_link">Read Full something s</a>
-                </div>
-            </div>
 
+                <!-- right -->
+                <button class="carousel_arrow carousel_arrow_right" id="arrowRight">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
 
-        <div class="carousel_nav">
-            <!-- left -->
-            <button class="carousel_arrow carousel_arrow_left" id="arrowLeft">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            
-            <div id="carousel_dots">
-                <span class="carousel_dot" data-index="0"></span>
-                <span class="carousel_dot" data-index="1"></span>
-                <span class="carousel_dot" data-index="2"></span>
-            </div>
-
-            <!-- right -->
-            <button class="carousel_arrow carousel_arrow_right" id="arrowRight">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-        </div>
     </div>
 
     <div class="container" id="services">
 
-
     </div>
+
     <div class="container" id="about"></div>
     <div class="container" id="contact"></div>
     <footer id="footer">
 
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
