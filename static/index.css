@@ -19,6 +19,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -94,6 +95,10 @@ body {
     overflow: hidden;
 }
 
+#landing::-webkit-scrollbar {
+    display: non;
+}
+
 #LPU-video {
     position: absolute;
     background-color: var(--color-bg);
@@ -124,16 +129,17 @@ body {
 
 #text-group {
     width: 100%;
-    height: 30%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     padding: 0 15% 0 15%;
-    
+
+
 }
 
-#eme-eme-ni-renan{
+#eme-eme-ni-renan {
     height: 30%;
 
     width: 100%;
@@ -141,20 +147,25 @@ body {
     justify-content: flex-start;
     align-items: center;
     gap: 3%;
-    
+
 }
 
-#always-h1{
+#always-h1 {
     color: var(--color-text-white);
     font-size: 4rem;
     font-weight: 700;
 }
 
-#you-h1{
+#you-h1 {
     color: var(--color-accent);
     font-size: 5rem;
 }
 
+.landing-p {
+    color: var(--color-text-white);
+    text-align: justify;
+
+}
 
 #landing-right {
     height: 100dvh;
@@ -165,8 +176,9 @@ body {
     opacity: 40%;
 }
 
-.subheading-h2{
+.subheading-h2 {
     color: var(--color-text-white);
+    transform: translateY(100%);
 }
 
 .hero_title {
@@ -177,29 +189,23 @@ body {
 
 }
 
-.hero_subtext {
-    /* Inter Regular */
-    font-size: 1rem;
-    font-weight: 400;
-    max-width: 490px;
-    color: var(--color-text-white);
-
+#hero-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0px black solid;
+    background-color: var(--color-accent);
+    color: white;
+    box-shadow: inset 0 0 10px rgba(41, 40, 40, 0.24);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 
-.hero_btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--color-secondary);
-    color: var(--color-text-white);
-    font-weight: 600;
-    text-decoration: none;
+#hero-btn:hover {
+    color: var(--color-accent);
+    background-color: white;
+    transform: translateX(30%) scale(1.5);
 }
 
-.hero_btn:hover {
-    background-color: #007Bd4;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 147, 252, 0.25)
-}
 
 #mini-nav {
     height: 20dvh;
@@ -209,27 +215,73 @@ body {
 
 #announcement {
     background-color: violet;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* top, right, bottom, left PALAGAY LANG LAGI KO NAKAKALIMUTAN HAHAH*/
-    padding: 0px 10% 5% 5%;
-
-    gap: 32px;
+    padding: 60px 5% 40px 5%;
+    /* overflow: hidden; */
+    gap: 40px;
+    min-height: 100vh;
 }
 
 #header_announcement {
     background-color: rgb(201, 40, 40);
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
+    padding: 20px;
+    border: 8px;
 }
 
 #content_announcement {
     background-color: red;
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 40px;
+    justify-content: center;
+    width: 100%;
 }
 
+.announcement_card {
+    background-color: blue;
+    border-radius: 12px;
+    flex: 1 1 10px;
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.card_image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.card_subtext {
+    padding: 0 16px 5px 16px
+}
+
+.card_link {
+    /* top, right, bottom, left */
+    padding: 0 16px 20px 16px;
+    color: var(--color-text-white);
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 
 #services {
