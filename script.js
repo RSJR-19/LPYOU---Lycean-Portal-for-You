@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
 })
 
 
-// for carousell navi
+// for carousell navigation
 const track = document.getElementById('carouselTrack');
 const cards = document.querySelectorAll('.announcement_card');
 const dots = document.querySelectorAll('.carousel_dot');
@@ -55,7 +55,7 @@ let currentIndex = 0;
 const totalCards = cards.length;
 
 function moveCarousel() {
-    const slideDistance = currentIndex * 1000;
+    const slideDistance = currentIndex * 1000; // 100px size ng announcement card
     track.style.transform = `translateX(-${slideDistance}px)`;
 
     updateDots();

@@ -1,6 +1,10 @@
 video url from LPU website:
 https://cavite.lpu.edu.ph/wp-content/uploads/2022/04/Banner-Video-v2.webm
 
+profile pictures:
+https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg
+https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg
+https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg
 
 Instructions
 Create a website about a school, college, campus, or student services.
