@@ -4,13 +4,13 @@ const servicesBtn = document.getElementById("services-btn");
 const aboutBtn = document.getElementById("about-btn");
 const contactBtn = document.getElementById("contact-btn");
 
-function trigger(num){
-    ([homeBtn, announceBtn, servicesBtn, aboutBtn, contactBtn]).forEach(btn=>{
+function trigger(num) {
+    ([homeBtn, announceBtn, servicesBtn, aboutBtn, contactBtn]).forEach(btn => {
         btn.classList.remove("active");
         btn.style.fontWeight = "normal";
-        
+
     })
-    switch(num){
+    switch (num) {
         case 1:
             homeBtn.classList.add("active");
             homeBtn.style.fontWeight = "bold";
@@ -38,7 +38,50 @@ function trigger(num){
     }
 }
 
-window.addEventListener('load',()=>{
-    window.scrollTo({top:0,left:0,behavior:"smooth"})
+window.addEventListener('load', () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
     trigger(1);
 })
+
+
+// for carousell navi
+const track = document.getElementById('carouselTrack');
+const cards = document.querySelectorAll('.announcement_card');
+const dots = document.querySelectorAll('.carousel_dot');
+const arrowLeft = document.getElementById('arrowLeft');
+const arrowRight = document.getElementById('arrowRight');
+
+let currentIndex = 0;
+const totalCards = cards.length;
+
+function moveCarousel() {
+    const slideDistance = currentIndex * 1000;
+    track.style.transform = `translateX(-${slideDistance}px)`;
+
+    updateDots();
+}
+
+function updateDots() {
+    dots.forEach(function (dot) {
+        dot.classList.remove('active');
+    });
+    dots[currentIndex].classList.add('active');
+}
+
+arrowRight.addEventListener('click', function () {
+    currentIndex = currentIndex + 1;
+
+    if (currentIndex >= totalCards) {
+        currentIndex = 0;
+    }
+    moveCarousel();
+});
+
+arrowLeft.addEventListener('click', function () {
+    currentIndex = currentIndex - 1;
+
+    if (currentIndex < 0) {
+        currentIndex = totalCards - 1;
+    }
+    moveCarousel();
+});
