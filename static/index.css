@@ -1,66 +1,53 @@
+/* pang colors daw ?? */
+:root {
+    --color-primary: #225EAF;
+    --color-secondary: #0093FC;
+    --color-accent: #AF8E00;
+    --color-bg: #E6E9ED;
+    --color-text-heading: #0F172A;
+    --color-text-body: #475569;
+    --color-text-muted: #64748B;
+    --color-text-white: #F1F1F1;
+    --color-text-white-sub: #475569;
+}
+
 /*Pang Reset */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
     position: relative;
-  min-height: 100vh;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased; 
-  background-color: #e6e9ed;
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #e6e9ed;
 
 }
 
-#navbar{
+#navbar {
     height: 10dvh;
-    background-color: #E6E9ED;
     position: sticky;
     top: 0;
     z-index: 9999;
     display: flex;
     justify-content: space-around;
 
+    /* 
+        HINDI KO NA GETS ANG DISPLAY AT JUSTIFY-CONTENT WAH 
+            -gaudenz
+    */
+    /* padding: 0 8%; */
+
+    background-color: var(--color-bg);
 }
 
-#nav_left{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: RED;
-
-}
-
-#nav_right{
-    height: 100%;
-    width:40%;
-    background-color: YELLOW;
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.container{
-    background-color: yellow;
-    height: 100dvh;
-    width:100%;
-    display: flex;
-}
-
-#landing{
-    background-color: green;
-    height: 90dvh;
-
-}
-
-#logo-img{
+#logo-img {
     height: 80%;
     /* aspect-ratio: 1/1; */
     margin-left: 10px;
@@ -68,55 +55,142 @@ body {
     /* margin-top: 10px; */
 }
 
-#LPU-video{
-    position:absolute;
+#nav_left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: RED; */
+
+}
+
+#nav_right {
+    height: 100%;
+    width: 40%;
+    /* background-color: YELLOW; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_item {
+    font-size: 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.nav_item:hover,
+.nav_item.active {
+    border-bottom-color: var(--color-secondary, #0093FC);
+    text-decoration: none;
+}
+
+.container {
+    background-color: yellow;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+}
+
+#landing {
+    background-color: #0F172A;
+    position: relative;
+    height: 90dvh;
+}
+
+#LPU-video {
+    position: absolute;
     background-color: white;
     height: 90dvh;
     width: 100%;
 
 }
 
-#landing-left{
-    height: 90dvh;
+#landing-left {
+    height: 100%;
     width: 40%;
+    padding: 0 8% 0 1%;
+    /* idk if tama yan */
     background-color: #225EAF;
     position: absolute;
-    opacity: 50%;
+    /* opacity: 50%; */
+
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 18px
 }
 
-#landing-right{
+#landing-right {
     height: 90dvh;
     width: 60%;
     background-color: #AF8E00;
     position: absolute;
     left: 40%;
-    opacity: 50%;
+    opacity: 30%;
 }
 
-#mini-nav{
-    height:20dvh;
+.hero_title {
+    /* Inter BOLD */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+
+}
+
+.hero_subtext {
+    /* Inter Regular */
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 490px;
+    color: var(--color-text-white);
+
+}
+
+.hero_btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero_btn:hover {
+    background-color: #007Bd4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 147, 252, 0.25)
+}
+
+#mini-nav {
+    height: 20dvh;
     background-color: yellow;
     width: 100%;
 }
 
-#announcement{
+#announcement {
     background-color: violet;
 }
 
-#services{
+#services {
     background-color: orange;
 }
 
-#about{
+#about {
     background-color: red;
 }
 
-#contact{
+#contact {
     background-color: blue;
 }
 
 
-#footer{
+#footer {
     height: 30dvh;
     width: 100%;
     background-color: #161616;

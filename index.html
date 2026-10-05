@@ -5,30 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPYOU - Welcome</title>
+
+    <!-- Google Fonts: Inter (400, 600, 700) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Style -->
     <link rel="stylesheet" href="static/index.css">
 </head>
 
 <body>
     <nav id="navbar">
 
-
         <div id="nav_left">
             <img src="img/logo_banner.png" alt="A men with a megaphone the lyceans portal logo" id="logo-img">
         </div>
 
         <div id="nav_right">
-            <a id="nav_home">Home</a>
-            <a id="nav_title">Announcement</a>
-            <a id="nav_title">Services</a>
-            <a id="nav_title">About</a>
-            <a id="nav_title">Contact</a>
+            <a href="#hero" class="nav_item active">Home</a>
+            <a href="#announcement" class="nav_item">Announcements</a>
+            <a href="#services" class="nav_item">Services</a>
+            <a href="#about" class="nav_item">About</a>
+            <a href="#contact" class="nav_item">Contact</a>
         </div>
 
     </nav>
 
     <div class="container" id="landing">
-        <video src="img/LPU_Background.mp4" autoplay muted loop id="LPU-video"></video>
-        <div id="landing-left"></div>
+
+        <video autoplay loop muted playsinline id="LPU-video" src="img/LPU_Background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video Or The video is Messeng.
+        </video>
+
+        <div id="landing-left">
+            <h1 class="hero_title">The lorem ipsum lorem ipsum</h1>
+            <p class="hero_subtext">lorem ipsum lorem ipsum sawadika lorem ipsum lorem ipsum sawadika lorem ipsum lorem ipsum sawadika </p>
+            <a class="hero_btn">Learn More?</a>
+        </div>
+
         <div id="landing-right"></div>
 
     </div>
