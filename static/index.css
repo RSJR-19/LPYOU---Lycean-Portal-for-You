@@ -266,7 +266,6 @@ body {
 
 #announcement {
     background-color: var(--color-bg);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,12 +421,27 @@ body {
 }
 
 #services {
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: orange;
+}
+
+#services_card{
+    width: 90%;
+    height: 25%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ABOUTTTTTTTT */
 #about {
-    background-color: var(--color-button-hover);
+    background-color: var(--color-bg);
 
     display: flex;
     flex-direction: column;
