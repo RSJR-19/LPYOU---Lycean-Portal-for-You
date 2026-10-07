@@ -1,343 +1,464 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LPYOU - Welcome</title>
 
     <!-- Google Fonts: Inter (400, 600, 700) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Style -->
-    <link rel="stylesheet" href="static/index.css">
-</head>
+    <link rel="stylesheet" href="static/index.css" />
+  </head>
 
-<body>
+  <body>
     <nav id="navbar">
+      <div id="nav_left">
+        <img
+          src="img/logo_banner.png"
+          alt="A men with a megaphone the lyceans portal logo"
+          id="logo-img"
+        />
+      </div>
 
-        <div id="nav_left">
-            <img src="img/logo_banner.png" alt="A men with a megaphone the lyceans portal logo" id="logo-img">
-        </div>
+      <div id="nav_right">
+        <a
+          href="#landing"
+          class="nav_item"
+          id="home-btn"
+          onclick="trigger(1)"
+          title="From the top"
+          >Home</a
+        >
+        <a
+          href="#announcement"
+          class="nav_item"
+          id="announce-btn"
+          onclick="trigger(2)"
+          title="Know what's new"
+          >Announcements</a
+        >
+        <a
+          href="#services"
+          class="nav_item"
+          id="services-btn"
+          onclick="trigger(3)"
+          title="Services to help you"
+          >Services</a
+        >
 
-        <div id="nav_right">
-            <a href="#landing" class="nav_item" id="home-btn" onclick="trigger(1)" title="From the top">Home</a>
-            <a href="#announcement" class="nav_item" id="announce-btn" onclick="trigger(2)"
-                title="Know what's new">Announcements</a>
-            <a href="#services" class="nav_item" id="services-btn" onclick="trigger(3)"
-                title="Services to help you">Services</a>
-
-
-
-            <a href="#about" class="nav_item" id="about-btn" onclick="trigger(4)" title="About Us">About</a>
-            <a href="#contact" class="nav_item" id="contact-btn" onclick="trigger(5)"
-                title="Important Numbers">Contact</a>
-        </div>
-
+        <a
+          href="#about"
+          class="nav_item"
+          id="about-btn"
+          onclick="trigger(4)"
+          title="About Us"
+          >About</a
+        >
+        <a
+          href="#contact"
+          class="nav_item"
+          id="contact-btn"
+          onclick="trigger(5)"
+          title="Important Numbers"
+          >Contact</a
+        >
+      </div>
     </nav>
 
     <div class="container" id="landing">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        id="LPU-video"
+        src="img/LPU_Background.mp4"
+        type="video/mp4"
+      >
+        Your browser does not support HTML5 video Or The video is Messeng.
+      </video>
 
-        <video autoplay loop muted playsinline id="LPU-video" src="img/LPU_Background.mp4" type="video/mp4">
-            Your browser does not support HTML5 video Or The video is Messeng.
-        </video>
-
-        <div id="text-overlay">
-
-            <div id="text-group">
-                <h2 class="subheading-h2">Know what's new,</h2>
-                <div id="eme-eme-ni-renan">
-                    <h1 id="always-h1">always for</h1>
-                    <h1 id="you-h1">YOU</h1>
-                </div>
-                <p class="landing-p">A platform for staying updated with the latest announcements from different
-                    departments, accessing services, and finding important details and contacts.</p>
-                <br>
-                <p class="landing-p"><strong>Made by Lyceans, For Lyceans</strong></p>
-                <br>
-                <br>
-                <a id="hero-btn" href="#announcement">Know What's New</a>
-
-            </div>
-
+      <div id="text-overlay">
+        <div id="text-group">
+          <h2 class="subheading-h2">Know what's new,</h2>
+          <div id="eme-eme-ni-renan">
+            <h1 id="always-h1">always for</h1>
+            <h1 id="you-h1">YOU</h1>
+          </div>
+          <p class="landing-p">
+            A platform for staying updated with the latest announcements from
+            different departments, accessing services, and finding important
+            details and contacts.
+          </p>
+          <br />
+          <p class="landing-p"><strong>Made by Lyceans, For Lyceans</strong></p>
+          <br />
+          <br />
+          <a id="hero-btn" href="#announcement">Know What's New</a>
         </div>
-        <div id="landing-left">
-        </div>
+      </div>
+      <div id="landing-left"></div>
 
-        <div id="landing-right"></div>
-
+      <div id="landing-right"></div>
     </div>
 
     <div class="container" id="announcement">
-        <div id="header_card">
-            <span class="card_tag">Anouncements</span>
-            <h2 class="card_title">Latest Chikawa</h2>
-            <p class="card_subtext">Stay informed sa kaguluhan sa campus etc...</p>
+      <div id="header_card">
+        <span class="card_tag">Anouncements</span>
+        <h2 class="card_title">Latest Chikawa</h2>
+        <p class="card_subtext">Stay informed sa kaguluhan sa campus etc...</p>
+      </div>
+
+      <div class="carousel_container">
+        <div class="carousel_track" id="carouselTrack">
+          <!-- card 1 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">Hardware</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">Missing</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
+
+          <!-- card 1 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">Hardware</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/uncle_chikawa.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">Missing</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="announcement_card">
+            <div class="announcement_card_header">
+              <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
+              <span class="announcement_card_date">Oct 5, 20226</span>
+            </div>
+            <div class="announcement_card_image">
+              <img
+                src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
+                alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite"
+              />
+            </div>
+            <div class="announcement_card_subtext">
+              <p>
+                something something something something something something
+                something
+              </p>
+            </div>
+            <div class="announcement_card_footer">
+              <a href="#post" class="announcement_card_link"
+                >Read Full something s</a
+              >
+            </div>
+          </div>
         </div>
 
-        <div class="carousel_container">
-            <div class="carousel_track" id="carouselTrack">
-                <!-- card 1 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Hardware</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
+        <div class="carousel_nav">
+          <!-- left -->
+          <button class="carousel_arrow carousel_arrow_left" id="arrowLeft">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
 
-                </div>
+          <div id="carousel_dots">
+            <span class="carousel_dot active" data-index="0"></span>
+            <span class="carousel_dot" data-index="1"></span>
+            <span class="carousel_dot" data-index="2"></span>
+            <span class="carousel_dot" data-index="3"></span>
+            <span class="carousel_dot" data-index="4"></span>
+            <span class="carousel_dot" data-index="5"></span>
+          </div>
 
-                <!-- card 2 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Missing</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 3 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 1 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Hardware</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-
-                </div>
-
-                <!-- card 2 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Missing</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 3 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite">
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>something something something something something something something </p>
-
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="carousel_nav">
-                <!-- left -->
-                <button class="carousel_arrow carousel_arrow_left" id="arrowLeft">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-
-                <div id="carousel_dots">
-                    <span class="carousel_dot active" data-index="0"></span>
-                    <span class="carousel_dot" data-index="1"></span>
-                    <span class="carousel_dot" data-index="2"></span>
-                    <span class="carousel_dot" data-index="3"></span>
-                    <span class="carousel_dot" data-index="4"></span>
-                    <span class="carousel_dot" data-index="5"></span>
-                </div>
-
-                <!-- right -->
-                <button class="carousel_arrow carousel_arrow_right" id="arrowRight">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
+          <!-- right -->
+          <button class="carousel_arrow carousel_arrow_right" id="arrowRight">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
-
+      </div>
     </div>
 
     <div class="container" id="services">
-        <div id="services_card">
-            <span class="span_service">SERVICES</span>
-            <h1>Services you may need</h1>
-        </div>
-
+      <div id="services_card">
+        <span class="span_service">SERVICES</span>
+        <h1>Services you may need</h1>
+        <p>Lorem ipsum hahhaahhahahha</p>
+      </div>
     </div>
 
     <div class="container" id="about">
-        <div class="header_about">
-            <span class="card_tag">ABOUT US</span>
-            <h1 class="card_title">This is Lans!!!!!!</h1>
-            <p class="card_subtext">Lorem ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
+      <div class="header_about">
+        <span class="card_tag">ABOUT US</span>
+        <h1 class="card_title">This is Lans!!!!!!</h1>
+        <p class="card_subtext">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <div class="about_content">
+        <!-- mission -->
+        <div class="about_card">
+          <div class="about_card_title_div">
+            <h2 class="about_card_title">Our Mission</h2>
+          </div>
+          <p class="about_card_subtext">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Officia
+            mollit odio consequatur est occaecat. Officia nam deserunt consequat
+            eum et et et sit est lorem aute facere.
+          </p>
+        </div>
+        <!-- vision -->
+        <div class="about_card">
+          <div class="about_card_title_div">
+            <h2 class="about_card_title">Our Mission</h2>
+          </div>
+          <p class="about_card_subtext">
+            Wala kaming makita banlag si gaudenz. Officia nam deserunt consequat
+            eum et et et sit est lorem aute facere.
+          </p>
+        </div>
+        <!-- idk -->
+        <div class="about_card">
+          <div class="about_card_title_div">
+            <h2 class="about_card_title">Our Mission</h2>
+          </div>
+          <p class="about_card_subtext">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Officia
+            mollit odio consequatur est occaecat. Officia nam deserunt consequat
+            eum et et et sit est lorem aute facere.
+          </p>
+        </div>
+      </div>
+
+      <div class="header_about">
+        <span class="card_tag">Developers</span>
+        <h1 class="card_title">Meet the Developers</h1>
+        <p class="card_subtext">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.
+        </p>
+      </div>
+
+      <div class="about_developers">
+        <div class="header_about" id="dev_face">
+          <img
+            class="dev_picute"
+            src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
+          />
+          <h2 class="dev_name">Renan Sumbad Jr.</h2>
+          <p class="dev_subtext">main dev</p>
         </div>
 
-        <div class="about_content">
-            <!-- mission -->
-            <div class="about_card">
-                <div class="about_card_title_div">
-                    <h2 class="about_card_title">Our Mission</h2>
-                </div>
-                <p class="about_card_subtext">Lorem ipsum dolor sit amet consectetur adipiscing elit. Officia mollit
-                    odio
-                    consequatur est occaecat. Officia nam deserunt consequat eum et et et sit est lorem aute facere.</p>
-            </div>
-            <!-- vision -->
-            <div class="about_card">
-                <div class="about_card_title_div">
-                    <h2 class="about_card_title">Our Mission</h2>
-                </div>
-                <p class="about_card_subtext">Wala kaming makita banlag si gaudenz. Officia nam deserunt consequat eum
-                    et et et sit est lorem aute facere.</p>
-            </div>
-            <!-- idk -->
-            <div class="about_card">
-                <div class="about_card_title_div">
-                    <h2 class="about_card_title">Our Mission</h2>
-                </div>
-                <p class="about_card_subtext">Lorem ipsum dolor sit amet consectetur adipiscing elit. Officia mollit
-                    odio
-                    consequatur est occaecat. Officia nam deserunt consequat eum et et et sit est lorem aute facere.</p>
-            </div>
+        <div class="header_about" id="dev_face">
+          <img
+            class="dev_picute"
+            src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg"
+          />
 
+          <div></div>
+          <h2 class="dev_name">Gaudenz Padullon</h2>
+          <p class="dev_subtext">main dev</p>
         </div>
 
-        <div class="header_about">
-            <span class="card_tag">Developers</span>
-            <h1 class="card_title">Meet  the Developers</h1>
-            <p class="card_subtext">Lorem ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
+        <div class="header_about" id="dev_face">
+          <img
+            class="dev_picute"
+            src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
+          />
+          <h2 class="dev_name">Dave Cawaling</h2>
+          <p class="dev_subtext">main dev</p>
         </div>
 
-        <div class="about_developers">
-            <div class="header_about" id="dev_face">
-                <img class="dev_picute" src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg">
-                <h2 class="dev_name">Renan Sumbad Jr.</h2>
-                <p class="dev_subtext">main dev</p>
-            </div>
-
-            <div class="header_about" id="dev_face">
-                <img class="dev_picute" src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg">
-
-                <div></div>
-                <h2 class="dev_name">Gaudenz Padullon</h2>
-                <p class="dev_subtext">main dev</p>
-            </div>
-
-            <div class="header_about" id="dev_face">
-                <img class="dev_picute" src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg">
-                <h2 class="dev_name">Dave Cawaling</h2>
-                <p class="dev_subtext">main dev</p>
-            </div>
-
-            <div class="header_about" id="dev_face">
-                <img class="dev_picute" src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg">
-                <h2 class="dev_name">John Vincent Dela Rama</h2>
-                <p class="dev_subtext">main dev</p>
-            </div>
+        <div class="header_about" id="dev_face">
+          <img
+            class="dev_picute"
+            src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
+          />
+          <h2 class="dev_name">John Vincent Dela Rama</h2>
+          <p class="dev_subtext">main dev</p>
         </div>
+      </div>
 
-        <div class="about_button_container">
-            <a href="#contact" class="about_btn">
-                <span>Get in Touch</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-            </a>
-        </div>
-
+      <div class="about_button_container">
+        <a href="#contact" class="about_btn">
+          <span>Get in Touch</span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
     </div>
 
     <div class="container" id="contact">
+      <div class="contact_left">
+        <h2>Contact Us</h2>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contact_right">
+        <h2></h2>
+      </div>
+
+
     </div>
 
     <footer id="footer">
-        <div class="footer_main">
-            <a class="footer_brand">
-                <img src="img/full_logo.png" alt="yung logo pero detailed">
-            </a>
-            <div class="footer_nav">
-                <a href="#landing">Home</a>
-                <a href="#announcement">Announcements</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-            </div>
+      <div class="footer_main">
+        <a class="footer_brand">
+          <img src="img/full_logo.png" alt="yung logo pero detailed" />
+        </a>
+        <div class="footer_nav">
+          <a href="#landing">Home</a>
+          <a href="#announcement">Announcements</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
         </div>
-        <div class="footer_bottom">
-            <span>LPYOU · Lycean Portal for You</span>
-            <span>Made by Lyceans, for Lyceans</span>
-        </div>
+      </div>
+      <div class="footer_bottom">
+        <span>LPYOU · Lycean Portal for You</span>
+        <span>Made by Lyceans, for Lyceans</span>
+      </div>
     </footer>
     <!-- COMMENT IF DEBUGGING CCS / reload ng reload eh -->
     <!-- <script src="script.js"></script> -->
-</body>
-
+  </body>
 </html>
