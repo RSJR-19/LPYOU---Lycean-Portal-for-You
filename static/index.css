@@ -439,6 +439,10 @@ body {
     align-items: center;
 }
 
+.span_service{
+    
+}
+
 /* ABOUTTTTTTTT */
 #about {
     background-color: var(--color-bg);
