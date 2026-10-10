@@ -1,0 +1,151 @@
+#announcement {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* top, right, bottom, left*/
+
+  gap: 40px;
+  height: 100dvh;
+}
+
+.carousel_container {
+  width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_track {
+  /* background-color: red; */
+  display: flex;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
+}
+
+.announcement_card {
+  background-color: var(--color-text-white);
+  border-radius: 16px;
+  width: 1000px;
+  height: 550px;
+
+  overflow: hidden;
+  display: flex;
+  flex: 0 0 1000px;
+  flex-direction: column;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.announcement_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}
+
+.announcement_card_title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+}
+
+.announcement_card_date {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.announcement_card_image {
+  height: 380px;
+  width: 100%;
+}
+
+.announcement_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.announcement_card_subtext {
+  padding: 0 16px 5px 16px;
+  flex-grow: 1;
+}
+
+.announcement_card_subtext p {
+  margin: 0;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.announcement_card_footer {
+  padding: 0 30px 25px 30px;
+}
+
+.announcement_card_link {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.announcement_card_link:hover {
+  background-color: var(--color-button-hover);
+  transform: scale(1.2);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.carousel_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+.carousel_arrow {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  opacity: 60%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.carousel_arrow:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  opacity: 95%;
+}
+
+#carousel_dots {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel_dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel_dot.active {
+  opacity: 1;
+  background-color: var(--color-secondary);
+  transform: scale(1.2);
+}
