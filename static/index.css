@@ -450,8 +450,52 @@ body {
   background-color: white;
   border-radius: 16px;
    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+   background-color: yellow;
+   overflow: hidden;
+   position: relative;
+   display: flex;
+   
 }
 
+.details_container{
+  position: absolute;
+  background-color: whitesmoke;
+  height: 20%;
+  width: 100%;
+  bottom: 0;
+
+
+}
+
+.title_tab{
+  height: 40%;
+  width: 50%;
+  background-color: var(--color-bg);
+  top: -40%;
+  position: absolute;
+  border-radius: 0 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#0093fc;
+}
+
+.details_container p, .details_container a{
+  margin: 0 0 0 20px;
+  
+}
+
+.service_pics{
+  width: 100%;
+  height: 100%;
+}
+
+.picture_container{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  
+}
 
 
 .span_service {
