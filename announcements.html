@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LPYOU - Welcome</title>
+    <title>LPYOU - Announcements</title>
 
     <!-- Google Fonts: Inter (400, 600, 700) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,183 +25,110 @@
         <div id="nav_right">
             <a href="index.html#landing" class="nav_item" id="home-btn" title="From the top">Home</a>
 
-            <a href="#announcement" class="nav_item" id="announce-btn" onclick="trigger(2)"
+            <a href="index.html#announcement" class="nav_item active" id="announce-btn" onclick="trigger(2)"
                 title="Know what's new">Announcements</a>
 
-            <a href="#services" class="nav_item" id="services-btn" onclick="trigger(3)"
+            <a href="index.html#services" class="nav_item" id="services-btn" onclick="trigger(3)"
                 title="Services to help you">Services</a>
 
-            <a href="#about" class="nav_item" id="about-btn" onclick="trigger(4)" title="About Us">About</a>
+            <a href="index.html#about" class="nav_item" id="about-btn" onclick="trigger(4)" title="About Us">About</a>
 
-            <a href="#contact" class="nav_item" id="contact-btn" onclick="trigger(5)"
+            <a href="index.html#contact" class="nav_item" id="contact-btn" onclick="trigger(5)"
                 title="Important Numbers">Contact</a>
         </div>
     </nav>
 
-    <div style="height: 5vw;"></div>
+    <div style="height: 1vw;"></div>
 
-    <div class="container" id="announcement">
-        <div id="header_card">
-            <span class="card_tag">Anouncements</span>
-            <h2 class="card_title">Latest Chikawa</h2>
-            <p class="card_subtext">Stay informed sa kaguluhan sa campus etc...</p>
-        </div>
+    <div class="container" id="announcement_page">
+        <div class="paper_container">
 
-        <div class="carousel_container">
-            <div class="carousel_track" id="carouselTrack">
-                <!-- card 1 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Hardware</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
+            <!-- ANNOUNCEMENT LIST -->
+            <div id="list-view">
+                <div id="header_card" class="newspaper_header">
+                    <span class="card_tag">Announcements</span>
+                    <h2 class="card_title">Latest Announcements</h2>
+                    <p class="card_subtext">Stay informed sa kaguluhan sa campus, department updates, and important
+                        dates.</p>
+                </div>
+
+                <a href="#" onclick="openArticle('midterm'); return false;" class="story_card lead_story">
+                    <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg" alt="Midterm Exams">
+                    <div class="story_content">
+                        <span class="story_dept">Registrar's Office</span>
+                        <h3 class="story_card_title">Midterm exams run October 19 to 24</h3>
+                        <p class="story_summary">The schedule for every program is out. Here is what to bring, where to
+                            find your room, and who to see if two exams overlap.</p>
+                        <span class="story_date">October 9, 2026</span>
                     </div>
-                    <div class="announcement_card_image">
+                </a>
+
+                <div class="story_row">
+                    <a href="#" onclick="openArticle('library'); return false;" class="story_card small_story">
+                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg" alt="Library">
+                        <span class="story_dept">Library</span>
+                        <h3 class="story_card_title">Library stays open until 9 PM during exam week</h3>
+                        <span class="story_date">October 8, 2026</span>
+                    </a>
+
+                    <a href="#" onclick="openArticle('wifi'); return false;" class="story_card small_story">
                         <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="announcements.html" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
+                            alt="IT Support">
+                        <span class="story_dept">IT Support</span>
+                        <h3 class="story_card_title">Campus Wi-Fi will be down on Saturday, October 17</h3>
+                        <span class="story_date">October 8, 2026</span>
+                    </a>
 
-                <!-- card 2 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Missing</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 3 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 1 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Hardware</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/uncle_chikawa.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#announcements.html" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 2 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">Missing</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
-                </div>
-
-                <!-- card 3 -->
-                <div class="announcement_card">
-                    <div class="announcement_card_header">
-                        <h3 class="announcement_card_title">BEWARE OF USAGING</h3>
-                        <span class="announcement_card_date">Oct 5, 20226</span>
-                    </div>
-                    <div class="announcement_card_image">
-                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg"
-                            alt="image of the announcement about the exam being CANCELLED due to wither storm in LPU Cavite" />
-                    </div>
-                    <div class="announcement_card_subtext">
-                        <p>
-                            something something something something something something
-                            something
-                        </p>
-                    </div>
-                    <div class="announcement_card_footer">
-                        <a href="#post" class="announcement_card_link">Read Full something s</a>
-                    </div>
+                    <a href="#" onclick="openArticle('scholarship'); return false;" class="story_card small_story">
+                        <img src="https://raw.githubusercontent.com/PitikNiG1/picture/main/uncle_chikawa.png"
+                            alt="Scholarship">
+                        <span class="story_dept">Scholarship Office</span>
+                        <h3 class="story_card_title">Scholarship info session on October 14</h3>
+                        <span class="story_date">October 3, 2026</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="carousel_nav">
-                <!-- left -->
-                <button class="carousel_arrow carousel_arrow_left" id="arrowLeft">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
+            <!-- ARTICLE VIEW PAPER -->
+            <div id="article-view" class="hidden">
+                <article class="newspaper_article">
+                    <a href="#" onclick="closeArticle(); return false;" class="back_link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        <span>Back to all announcements</span>
+                    </a>
 
-                <div id="carousel_dots">
-                    <span class="carousel_dot active" data-index="0"></span>
-                    <span class="carousel_dot" data-index="1"></span>
-                    <span class="carousel_dot" data-index="2"></span>
-                    <span class="carousel_dot" data-index="3"></span>
-                    <span class="carousel_dot" data-index="4"></span>
-                    <span class="carousel_dot" data-index="5"></span>
-                </div>
+                    <div class="article_tags">
+                        <span class="card_tag" id="art-dept">Department</span>
+                        <span class="card_tag" id="art-date">Date</span>
+                    </div>
 
-                <!-- right -->
-                <button class="carousel_arrow carousel_arrow_right" id="arrowRight">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+                    <h1 class="article_title" id="art-title">Article Title Here</h1>
+
+                    <div class="article_byline">
+                        Posted by <strong id="art-author">Author</strong>
+                    </div>
+
+                    <figure class="article_figure">
+                        <img id="art-image" src="" alt="Article Image">
+                        <figcaption class="article_caption" id="art-caption">Caption goes here.</figcaption>
+                    </figure>
+
+                    <div class="article_body" id="art-body">
+                        <!-- Content injected via JS -->
+                    </div>
+                </article>
             </div>
+
         </div>
     </div>
+
+    <div style="height: 5vw;">
+    </div>
+
 
     <footer id="footer">
         <div class="footer_main">
@@ -209,10 +136,10 @@
                 <img src="img/full_banner_compact.png" alt="yung logo pero detailed" />
             </a>
             <div class="footer_nav">
-                <a href="#landing">Home</a>
-                <a href="#announcement">Announcements</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
+                <a href="index.html#landing">Home</a>
+                <a href="index.html#announcement">Announcements</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
             </div>
         </div>
         <div class="footer_bottom">
@@ -226,9 +153,96 @@
     <!-- change based sa kung nasaan ka -->
     <script>
         window.addEventListener('load', () => {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
             trigger(2);
         })
+
+        // articles Database
+        const articlesDB = {
+            'midterm': {
+                dept: "Registrar's Office",
+                date: "October 9, 2026",
+                author: "The Registrar's Office",
+                title: "Midterm exams run October 19 to 24",
+                image: "https://raw.githubusercontent.com/PitikNiG1/picture/main/chikawa.jpg",
+                caption: "Exam schedules are posted outside the Registrar's Office and on the student portal.",
+                body: `
+                    <p>The Registrar's Office has released the midterm examination schedule for all programs. Exams run from Monday, October 19 to Saturday, October 24, 2026, and every student should confirm their exam dates and rooms before the week begins.</p>
+                    <p>Schedules are posted outside the Registrar's Office and on the student portal. Exam rooms can differ from your regular classroom, so look up the exact room for each subject. Check your room the day before the exam, not on the morning of.</p>
+                    <h3 class="article_subheading">On exam days:</h3>
+                    <ul class="article_list">
+                        <li>Bring a validated school ID and a pen.</li>
+                        <li>Arrive at least 15 minutes early.</li>
+                        <li>If your ID is not yet validated, see the notice from Student Affairs.</li>
+                    </ul>
+                    <p>Students with two exams at the same time should visit the Registrar before October 16 so a make-up slot can be arranged.</p>
+                `
+            },
+            'library': {
+                dept: "Library",
+                date: "October 8, 2026",
+                author: "The Library",
+                title: "Library stays open until 9 PM during exam week",
+                image: "https://raw.githubusercontent.com/PitikNiG1/picture/main/usagi.jpg",
+                caption: "Regular library hours return on Monday, October 26.",
+                body: `
+                    <p>To support students preparing for midterms, the library will extend its closing time from 5:00 PM to 9:00 PM from October 19 to October 24, 2026.</p>
+                    <p>Borrowing, returns, and the reading area will stay open throughout the extended hours. Group study rooms can be reserved at the front desk, and each reservation lasts up to two hours.</p>
+                    <p>Please bring your school ID to borrow materials. Quiet hours apply in the main reading area, so group discussions should be held in the study rooms.</p>
+                `
+            },
+            'wifi': {
+                dept: "IT Support",
+                date: "October 8, 2026",
+                author: "IT Support",
+                title: "Campus Wi-Fi will be down on Saturday, October 17",
+                image: "https://raw.githubusercontent.com/PitikNiG1/picture/main/hardware.jpg",
+                caption: "Wi-Fi is expected to be back by noon on Saturday, October 17.",
+                body: `
+                    <p>The IT Support office will upgrade the campus network on Saturday, October 17, 2026, from 8:00 AM to 12:00 PM. Wi-Fi will be unavailable in all buildings during this time.</p>
+                    <p>The student portal and online class platforms may also be hard to reach on campus during the upgrade. Students who need them should use mobile data or finish their tasks beforehand.</p>
+                    <p>If you still cannot connect after the upgrade, restart your device and reconnect to the campus network, or visit the IT Support office for help.</p>
+                `
+            },
+            'scholarship': {
+                dept: "Scholarship Office",
+                date: "October 3, 2026",
+                author: "The Scholarship Office",
+                title: "Scholarship info session on October 14",
+                image: "https://raw.githubusercontent.com/PitikNiG1/picture/main/uncle_chikawa.png",
+                caption: "Applications close on Friday, October 30, 2026.",
+                body: `
+                    <p>The Scholarship Office will hold an information session on Wednesday, October 14, 2026, at 2:00 PM in the main auditorium. Students who want to learn how to apply are welcome to attend.</p>
+                    <p>Bring a copy of your latest grades and a valid school ID. Staff will explain the requirements, the application steps, and how decisions are made.</p>
+                `
+            }
+        };
+
+        // Show Hide Show Hide div article-view and list-view
+        function openArticle(id) {
+            const data = articlesDB[id];
+            if (!data) return;
+
+            // Fill the template with data
+            document.getElementById('art-dept').innerText = data.dept;
+            document.getElementById('art-date').innerText = data.date;
+            document.getElementById('art-author').innerText = data.author;
+            document.getElementById('art-title').innerText = data.title;
+            document.getElementById('art-image').src = data.image;
+            document.getElementById('art-caption').innerText = data.caption;
+            document.getElementById('art-body').innerHTML = data.body; // innerHTML allows <p> and <ul> tags
+
+            // Hide List, Show Article
+            document.getElementById('list-view').classList.add('hidden');
+            document.getElementById('article-view').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeArticle() {
+            // Hide Article, Show List
+            document.getElementById('article-view').classList.add('hidden');
+            document.getElementById('list-view').classList.remove('hidden');
+        }
     </script>
 
 </body>
