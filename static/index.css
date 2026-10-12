@@ -401,6 +401,12 @@ body {
   height: 150dvh;
 }
 
+.extra-top-about{
+  background-color: var(--color-bg);
+  height: 10dvh;
+  width: 100%;
+}
+
 .header_about {
   background-color: var(--color-text-white);
   width: 90%;
@@ -536,7 +542,7 @@ body {
   align-items: center;
   /* top, right, bottom, left*/
   padding: 40px 0 40px 0;
-  height:65dvh;
+  height:100dvh;
 
   background-color: var(--color-Thirdy, #3E82ED);
 }

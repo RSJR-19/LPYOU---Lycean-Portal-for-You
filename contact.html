@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LPYOU - Welcome</title>
+
+  <!-- Google Fonts: Inter (400, 600, 700) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Style -->
+  <link rel="stylesheet" href="static/index.css" />
+  <link rel="stylesheet" href="static/announcements.css" />
+
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="nav_left">
+      <img src="img/logo_banner.png" alt="A men with a megaphone the lyceans portal logo" id="logo-img" />
+    </div>
+
+    <div id="nav_right">
+      <a href="index.html#landing" class="nav_item" id="home-btn" onclick="trigger(1)" title="From the top">Home</a>
+      <a href="announcements.html" class="nav_item" id="announce-btn" onclick="trigger(2)"
+        title="Know what's new">Announcements</a>
+      <a href='services.html' class="nav_item" id="services-btn" onclick="trigger(3)"
+        title="Services to help you">Services</a>
+
+      <a href="about.html" class="nav_item" id="about-btn" onclick="trigger(4)" title="About Us">About</a>
+      <a href="contact.html" class="nav_item" id="contact-btn" onclick="trigger(5)" title="Important Numbers">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container" id="contact">
+    <div class="contact_left">
+      <span class="contact_tag">GET IN TOUCH</span>
+      <h2 class="contact_title">We'd Love to Hear From You</h2>
+      <p class="contact_subtext">
+        Have a question, suggestion, or just want to say hi? Reach out to the LPYOU team!
+      </p>
+
+      <div class="contact_details">
+        <div class="contact_item">
+          <div class="contact_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>Lyceum of the Philippines University - Cavite</p>
+          </div>
+        </div>
+
+        <div class="contact_item">
+          <div class="contact_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p>support@lpyou.edu.ph</p>
+          </div>
+        </div>
+
+        <div class="contact_item">
+          <div class="contact_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+            </svg>
+          </div>
+          <div>
+            <h4>Socials</h4>
+            <p>@LPYOU_Portal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact_right">
+      <form class="contact_form">
+        <div class="form_group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" />
+        </div>
+
+        <div class="form_group">
+          <label for="email">Student Email</label>
+          <input type="email" id="email" name="email" placeholder="juan.delacruz@lpu.edu.ph" />
+        </div>
+
+        <div class="form_group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+        </div>
+
+        <input type="submit" value="Send Message" />
+      </form>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer_main">
+      <a class="footer_brand">
+        <img src="img/full_banner_compact.png" alt="yung logo pero detailed" />
+      </a>
+      <div class="footer_nav">
+        <a href="#landing">Home</a>
+        <a href="#announcement">Announcements</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <span>LPYOU · Lycean Portal for You</span>
+      <span>Made by Lyceans, for Lyceans</span>
+    </div>
+  </footer>
+  <!-- COMMENT IF DEBUGGING CCS / reload ng reload eh -->
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+            trigger(5);
+        })
+  </script>
+</body>
+
+</html>
