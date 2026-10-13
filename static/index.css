@@ -38,7 +38,43 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-bg);
+  
 }
+
+#loading-screen{
+  display: none;
+  height: 100dvh;
+  width: 100%;
+  position: absolute;
+  background-color: var(--color-primary);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.8s ease-in-out;
+  
+}
+
+#logo-loading{
+  height: min(40cqw, 40cqh);
+  transform: scale(0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+#loading-screen.effects{
+  background-color: var(--color-bg);
+}
+
+#loading-screen.hide{
+  opacity: 0;
+}
+
+#logo-loading.effects{
+  transform: scale(1);
+}
+
+
+
+
 
 #navbar {
   height: 10dvh;
@@ -58,6 +94,7 @@ body {
   height: 80%;
   margin-left: 10px;
 }
+
 
 #nav_left {
   height: 100%;
@@ -349,7 +386,7 @@ body {
 
 .service-card-back p{
   text-align: justify;
-  font-size: larger;
+  font-size: min(2qw, 2cqh);
   color: var(--color-text-body);
 }
 

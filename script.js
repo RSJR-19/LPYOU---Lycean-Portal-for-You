@@ -3,6 +3,9 @@ const announceBtn = document.getElementById("announce-btn");
 const servicesBtn = document.getElementById("services-btn");
 const aboutBtn = document.getElementById("about-btn");
 const contactBtn = document.getElementById("contact-btn");
+const loadingScreen = document.getElementById("loading-screen");
+const logoLoading = document.getElementById("logo-loading");
+const body = document.getElementById("body");
 
 function trigger(num) {
     ([homeBtn, announceBtn, servicesBtn, aboutBtn, contactBtn]).forEach(btn => {
@@ -37,6 +40,27 @@ function trigger(num) {
             break;
     }
 }
+
+window.addEventListener('load', ()=>{
+    loadingScreen.style.display = "flex";
+    body.style.overflow = "hidden";
+
+    setTimeout(()=>{
+        loadingScreen.classList.add('effects');
+        logoLoading.classList.add('effects');
+    }, 100)
+
+    setTimeout(()=>{
+        loadingScreen.classList.add("hide");
+        setTimeout(()=>{
+            loadingScreen.style.display = "none";
+            body.style.overflow = "auto";
+            loadingScreen.classList.remove('effects');
+            logoLoading.classList.remove("effects");
+            loadingScreen.classList.remove('hide')
+        }, 1500)
+    }, 1500);
+})
 
 window.addEventListener('load', () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
