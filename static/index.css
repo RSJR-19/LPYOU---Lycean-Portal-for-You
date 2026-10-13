@@ -12,6 +12,9 @@
   --color-text-white-sub: #475569;
   --color-button-hover: #0093fc28;
   --color-footer-bg: #111827;
+  --contact-icon-color: var(--color-text-white);
+  --contact-icon-size: 100%;
+  --contact-icon-stroke-width: 1.2;
 }
 
 /*Pang Reset */
@@ -570,7 +573,7 @@ body {
 .contact_title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-text-heading);
+  color: var(--color-text-white);
   margin-bottom: 16px;
   line-height: 1.2;
 }
@@ -598,14 +601,21 @@ body {
 .contact_icon {
   width: 48px;
   height: 48px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
+}
+
+.contact_icon svg {
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
+  fill: none;
+  stroke: var(--contact-icon-color);
+  stroke-width: var(--contact-icon-stroke-width);
 }
 
 .contact_item h4 {
