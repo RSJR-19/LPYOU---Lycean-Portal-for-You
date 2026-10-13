@@ -406,7 +406,9 @@ body {
 }
 
 .service-image-container img{
+  display: block;
   object-fit: cover;
+  object-position: center;
   height: 100%;
   width: 100%;
 }

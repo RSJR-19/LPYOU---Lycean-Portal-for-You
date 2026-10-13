@@ -79,7 +79,7 @@ let currentIndex = 0;
 const totalCards = cards.length;
 
 function moveCarousel() {
-    const slideDistance = currentIndex * 1000; // 100px size ng announcement card
+    const slideDistance = cards[currentIndex].offsetLeft;
     track.style.transform = `translateX(-${slideDistance}px)`;
 
     updateDots();
