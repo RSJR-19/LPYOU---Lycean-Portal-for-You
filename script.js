@@ -59,7 +59,7 @@ window.addEventListener('load', ()=>{
             logoLoading.classList.remove("effects");
             loadingScreen.classList.remove('hide')
         }, 1500)
-    }, 1500);
+    }, 1700);
 })
 
 window.addEventListener('load', () => {
